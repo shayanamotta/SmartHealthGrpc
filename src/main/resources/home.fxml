@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.skin.SplitPaneSkin.ContentDivider?>
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" stylesheets="styles.css"
+      fx:controller="org.shayana.Home"
+      prefWidth="800"
+      prefHeight="600"
+      alignment="CENTER">
+    <children>
+<FlowPane
+styleClass="bg_white"
+alignment="TOP_CENTER">
+    <Text
+        fill="#06390b"
+        text="Smart Health Systems"
+        styleClass="fw_24"
+    textAlignment="CENTER"/>
+</FlowPane>
+        <HBox
+            prefHeight="2"
+            styleClass="bg_gray"/>
+        <GridPane
+        styleClass="bg_white"
+
+        fx:id="mainGrid"
+        alignment="TOP_CENTER"
+        >
+
+            <JFXButton buttonType="RAISED" mnemonicParsing="false"
+                       prefHeight="114.0" prefWidth="203.0" text="Price List Client"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"
+                       textFill="antiquewhite"
+                       onMouseClicked="#showPriceLists"
+            styleClass="button_with_margin, bg_green">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="20"/>
+                </GridPane.margin>
+            </JFXButton>
+
+
+            <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0"
+                       GridPane.rowIndex="0"
+                       styleClass="button_with_margin, bg_green"
+                       GridPane.columnIndex="1"
+                       textFill="antiquewhite"
+                       onMouseClicked="#showEmployees"
+                       mnemonicParsing="false" prefHeight="114.0" prefWidth="203.0" text="Employees">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="20"/>
+            </GridPane.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0"
+                       GridPane.rowIndex="0"
+                       styleClass="button_with_margin, bg_green"
+                       GridPane.columnIndex="3"
+                       textFill="antiquewhite"
+                       onMouseClicked="#showAppointments"
+                       mnemonicParsing="false" prefHeight="114.0" prefWidth="203.0" text="Appointments">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="20"/>
+                </GridPane.margin>
+            </JFXButton>
+            <JFXListView
+                    fx:id="statusList"
+                    styleClass="jfx_list_view"
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="0"
+            GridPane.columnSpan="4"
+            GridPane.hgrow="ALWAYS"
+                    prefHeight="300"
+            GridPane.rowSpan="3">
+
+
+            </JFXListView>
+
+        </GridPane>
+
+
+    </children>
+
+
+</VBox>

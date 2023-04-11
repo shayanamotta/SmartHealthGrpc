@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600" prefWidth="800" stylesheets="styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.shayana.Employees">
+
+    <GridPane fx:id="mainGrid" alignment="TOP_CENTER" styleClass="bg_white">
+        <JFXTextField fx:id="employeeIdInput" labelFloat="true" promptText="Employee ID" GridPane.columnIndex="0"
+                      GridPane.rowIndex="0">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+        </JFXTextField>
+        <JFXTextField fx:id="employeeNameInput" labelFloat="true" promptText="Employee Name" GridPane.columnIndex="1"
+                      GridPane.rowIndex="0">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+        </JFXTextField>
+
+        <JFXButton fx:id="deleteEmployee" buttonType="RAISED" onAction="#deleteEmployee"
+                   styleClass="bg_red_only" text="Delete Employee" textFill="antiquewhite" GridPane.columnIndex="4"
+                   GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+        </JFXButton>
+
+        <TableView fx:id="serviceList" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+
+            <columns>
+                <TableColumn fx:id="employeeId" text="Employee ID"/>
+                <TableColumn fx:id="employeeName" text="Employee Name"/>
+            </columns>
+        </TableView>
+        <JFXListView fx:id="eventsList" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+        </JFXListView>
+        <JFXButton fx:id="addEmployee1" buttonType="RAISED" layoutX="580.0" layoutY="67.0"
+                   onMouseClicked="#addService" styleClass="bg_green_only" text="Add Employee" textFill="antiquewhite"
+                   GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <columnConstraints>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+
+    </GridPane>
+
+</VBox>

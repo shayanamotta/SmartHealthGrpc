@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.skin.SplitPaneSkin.ContentDivider?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.skin.TableHeaderRow?>
+<?import javafx.scene.control.TableColumn?>
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" stylesheets="styles.css"
+      fx:controller="org.shayana.PriceList"
+      prefWidth="800"
+      prefHeight="600"
+      >
+
+        <GridPane
+        styleClass="bg_white"
+        fx:id="mainGrid"
+        alignment="TOP_CENTER"
+        >
+<JFXTextField
+    labelFloat="true"
+    promptText="Service ID"
+    GridPane.rowIndex="0"
+    GridPane.columnIndex="0"
+    fx:id="serviceIdInput">
+    <GridPane.margin>
+        <Insets topRightBottomLeft="10"/>
+    </GridPane.margin>
+</JFXTextField>
+            <JFXTextField
+                    labelFloat="true"
+                    promptText="Service Name"
+                    GridPane.rowIndex="0"
+                    GridPane.columnIndex="1"
+                    fx:id="serviceNameInput">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField
+                    labelFloat="true"
+                    promptText="Service Cost"
+                    GridPane.rowIndex="0"
+                    GridPane.columnIndex="2"
+                    fx:id="serviceCostInput">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXTextField>
+            <JFXTimePicker
+                    promptText="Time Offered"
+                    GridPane.rowIndex="0"
+                    GridPane.columnIndex="3"
+                    fx:id="timeOffered">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXTimePicker>
+            <JFXTextField
+                    labelFloat="true"
+                    promptText="Available Slots"
+                    GridPane.rowIndex="0"
+                    GridPane.columnIndex="4"
+                    fx:id="slotsInput">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXTextField>
+            <JFXButton
+                    styleClass="bg_red_only"
+                    textFill="antiquewhite"
+                    text="Remove Service"
+                    visible="false"
+                    fx:id="removeServiceBtn"
+                    onMouseClicked="#removeService"
+                    GridPane.columnIndex="3"
+                    GridPane.rowIndex="1">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXButton>
+<JFXButton
+    styleClass="bg_green_only"
+    textFill="antiquewhite"
+    text="Add Service"
+    onMouseClicked="#addService"
+GridPane.columnIndex="4"
+GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets topRightBottomLeft="10"/>
+            </GridPane.margin>
+</JFXButton>
+
+            <TableView
+                fx:id="serviceList"
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="0"
+                GridPane.columnSpan="3">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+
+                <columns>
+                    <TableColumn text="Service ID" fx:id="serviceId"/>
+                    <TableColumn text="Service Name" fx:id="serviceName"/>
+                    <TableColumn text="Time Offered" fx:id="timeoffered"/>
+                    <TableColumn text="Service Cost" fx:id="cost"/>
+                    <TableColumn text="Slots" fx:id="slots"/>
+                </columns>
+            </TableView>
+            <JFXListView
+                fx:id="eventsList"
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="3"
+                GridPane.columnSpan="4">
+                <GridPane.margin>
+                    <Insets topRightBottomLeft="10"/>
+                </GridPane.margin>
+            </JFXListView>
+
+        </GridPane>
+
+</VBox>

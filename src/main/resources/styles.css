@@ -1,0 +1,31 @@
+.bg_white{
+-fx-background-color:white;
+}
+.text_black{
+-fx-font-color:black;
+}
+
+.button-with-margin {
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.bg_green{
+-fx-background-color:green;
+-fx-font-size:24
+}
+.bg_green_only{
+-fx-background-color:green;
+}
+.bg_red_only{
+-fx-background-color:red;
+}
+.fw_24{
+-fx-font-size:24
+}
+
+.bg_grey{
+-fx-background-color:grey;
+}
+
