@@ -1,0 +1,33 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package org.shayana;
+
+service Employee{
+rpc listEmployee(stream ListEmployeeRequest) returns(stream ListEmployeeResponse);
+rpc addEmployee(AddEmployeeRequest) returns (stream ListEmployeeResponse);
+rpc deleteEmployee(DeleteEmployeeRequest) returns(stream ListEmployeeResponse);
+}
+
+message ListEmployeeRequest{
+
+}
+
+message ListEmployeeResponse{
+optional string message=2;
+bool success=3;
+repeated EmployeeItem employees=1;
+}
+
+message AddEmployeeRequest{
+EmployeeItem employee=1;
+}
+
+message EmployeeItem{
+  string employeeName=1;
+  string employeeId=2;
+}
+
+
+message DeleteEmployeeRequest{
+string employeeId=1;
+}
