@@ -1,9 +1,7 @@
-package com.shayana.smarthealthgrpc;
+package com.shayana;
 
-<<<<<<< HEAD
 import io.grpc.stub.StreamObserver;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Calendar;
 
@@ -61,7 +59,4 @@ public class EmployeeImpl extends EmployeeGrpc.EmployeeImplBase {
         ClientStart.registerStreamer(responseObserver);
         return ClientStart.streamer;
     }
-=======
-public class EmployeeImpl extends EmployeeGrpc.EmployeeImplBase {
->>>>>>> 7c5c0b0 (Setup the server)
 }

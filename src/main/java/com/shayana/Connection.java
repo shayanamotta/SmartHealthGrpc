@@ -1,4 +1,4 @@
-package com.shayana.smarthealthgrpc;
+package com.shayana;
 
 import javax.swing.*;
 import java.sql.DriverManager;
@@ -35,7 +35,6 @@ public class Connection {
         statement.execute(query3);
 
         statement.closeOnCompletion();
-        connection.close();
 
 
     }

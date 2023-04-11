@@ -1,8 +1,8 @@
-module com.example.smarthealthgrpc {
+module main {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.shayana.smarthealthgrpc to javafx.fxml;
-    exports com.shayana.smarthealthgrpc;
+    opens com.shayana to javafx.fxml;
+    exports com.shayana;
 }

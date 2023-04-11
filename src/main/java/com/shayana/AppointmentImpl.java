@@ -1,10 +1,8 @@
-package com.shayana.smarthealthgrpc;
+package com.shayana;
 
-<<<<<<< HEAD
 import io.grpc.stub.StreamObserver;
 
 import javax.swing.*;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Objects;
@@ -145,7 +143,4 @@ public class AppointmentImpl extends AppointmentGrpc.AppointmentImplBase {
             responseObserver.onCompleted();
         }
     }
-=======
-public class AppointmentImpl extends AppointmentGrpc.AppointmentImplBase {
->>>>>>> 7c5c0b0 (Setup the server)
 }
